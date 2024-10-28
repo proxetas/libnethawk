@@ -8,4 +8,7 @@ type API struct {
 	QuarantineIP func(ip string, duration time.Duration)
 	ReleaseIP    func(ip string)
 	SendMessage  func(extension string, message string)
+	GetPeerAlias func(ip string) string
+	GetPeerMeta  func(ip string) string
+	SetKnownPeer func(ip string, alias string, meta string)
 }
