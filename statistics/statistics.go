@@ -20,6 +20,11 @@ type RateStat struct {
 	SnapshotTime time.Time
 }
 
+type Bandwidth struct {
+	Upload   float64 `json:"upload"`
+	Download float64 `json:"download"`
+}
+
 func SubtractStats(a *Stat, b *Stat) *Stat {
 	result := &Stat{
 		SYN:                a.SYN - b.SYN,
@@ -34,4 +39,3 @@ func SubtractStats(a *Stat, b *Stat) *Stat {
 
 	return result
 }
-

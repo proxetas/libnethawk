@@ -11,4 +11,6 @@ type API struct {
 	GetPeerAlias func(ip string) string
 	GetPeerMeta  func(ip string) string
 	SetKnownPeer func(ip string, alias string, meta string)
+	Lockdown     func()
+	EndLockdown  func()
 }
